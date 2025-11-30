@@ -56,10 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Image.network('https://www.manga-jam.com/wp-content/uploads/2011/07/HowDrawNarutoStep_11.jpg',
-      height: double.infinity,
-        fit: BoxFit.cover,
-      ),
+      // body: Image.network('https://www.manga-jam.com/wp-content/uploads/2011/07/HowDrawNarutoStep_11.jpg',
+      // height: double.infinity,
+      //   fit: BoxFit.cover,
+      // ),
+      body: Image.asset('assets/images/MasterCard.png',
+       height: double.infinity,
+      //  fit: BoxFit.cover,
+      )
     );
   }
 }
