@@ -55,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        leading: Icon(Icons.notifications, color: Colors.amberAccent),
       ),
       // body: Image.network('https://www.manga-jam.com/wp-content/uploads/2011/07/HowDrawNarutoStep_11.jpg',
       // height: double.infinity,
@@ -62,17 +63,29 @@ class _MyHomePageState extends State<MyHomePage> {
       // ),
       body: Stack(
         children: [
-          Image.network(
-            'https://www.manga-jam.com/wp-content/uploads/2011/07/HowDrawNarutoStep_11.jpg',
-            height: 350,
-            //  height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+          // Image.network(
+          //   'https://www.manga-jam.com/wp-content/uploads/2011/07/HowDrawNarutoStep_11.jpg',
+          //   height: 350,
+          //   //  height: double.infinity,
+          //   fit: BoxFit.cover,
+          // ),
           SizedBox(
             height: 300,
             child: Center(
-              child: Text('Hiiiii', style: TextStyle(color: Colors.blueAccent)),
+              child: Text(
+                'Hiiiii',
+                style: TextStyle(color: const Color.fromARGB(255, 2, 41, 108)),
+              ),
             ),
+          ),
+          ListTile(
+            leading: Icon(Icons.candlestick_chart_outlined),
+            title: Text('wats zuuppppp'),
+            tileColor: Colors.purpleAccent,
+            trailing: Text('hluuu'),
+            onTap: () {
+              print('clicked========>>>>>>>>');
+            },
           ),
         ],
       ),
