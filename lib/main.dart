@@ -60,10 +60,22 @@ class _MyHomePageState extends State<MyHomePage> {
       // height: double.infinity,
       //   fit: BoxFit.cover,
       // ),
-      body: Image.asset('assets/images/MasterCard.png',
-       height: double.infinity,
-      //  fit: BoxFit.cover,
-      )
+      body: Stack(
+        children: [
+          Image.network(
+            'https://www.manga-jam.com/wp-content/uploads/2011/07/HowDrawNarutoStep_11.jpg',
+            height: 350,
+            //  height: double.infinity,
+            fit: BoxFit.cover,
+          ),
+          SizedBox(
+            height: 300,
+            child: Center(
+              child: Text('Hiiiii', style: TextStyle(color: Colors.blueAccent)),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
